@@ -301,6 +301,13 @@ header.header .logo {
     padding-bottom: var(--padding60);
 }
 
+@media (max-width: 767px) {
+    .services .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 
 .services .services-content {
     display: grid;
