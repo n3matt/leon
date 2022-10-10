@@ -1,0 +1,638 @@
+:root {
+    --mainColor: #10cab7;
+    --sectionColor: #ebeced;
+    --headColor: #2c4755;
+    --padding60: 60px;
+    --bgColor: #f6f6f6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+.container {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+
+/*--| Start Media Query Styling |--*/
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+    
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*--|End Media Query Styling|--*/
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+
+/*--| Start Header Section Style |--*/
+header.header {
+    padding: 15px;
+}
+
+header.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.header .logo {
+    width: 50px;
+}
+
+.header .links {
+    position: relative;
+} 
+
+
+.header .links .bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 30px;
+}
+
+
+.header .links .bars span{
+    margin-bottom: 5px;
+    background-color: #24484f;
+    width: 100%;
+    height: 2px;
+}
+
+.header .links .bars span:nth-child(2) {
+    width: 60%;
+    transition: .2s;
+}
+
+
+.header .links .bars:hover span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: var(--headColor);
+    min-width: 220px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    z-index: 1;
+    display: none;
+}
+
+.header .links:hover ul{
+    display: block;
+}
+
+
+.header .links ul::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 5px;
+    border-color: transparent transparent var(--headColor) transparent;
+    border-width: 15px;
+    border-style: solid;
+}
+
+.header .links ul li {
+    width: 100%;
+    
+}
+
+
+.header .links ul li a {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: var(--sectionColor);
+    border-bottom: 1px solid var(--mainColor);
+    transition: .3s linear;
+}
+
+.header .links ul li a:hover  {
+    padding-left: 50px;
+}
+
+
+/*--| End Header Section Style |--*/
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+
+/*--| Start Landing Section Style |--*/
+
+.landing {
+    height: calc(100vh - 66px);
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+.landing .intero-text {
+    position: absolute;
+    width: 320px;
+    max-width: 100%;
+    top: 20%;
+    left: 50%;
+    translate: -50%;
+    text-align: center;
+}
+
+.landing .intero-text h1 {
+    margin: 0;
+    color: var(--mainColor);
+    font-weight: 900;
+    font-size: 50px;
+}
+
+/*--| End Landing Section Style |--*/
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+
+/*--| Start Features Section Style |--*/
+
+
+.features {
+    padding-top: var(--padding60);
+    padding-bottom: var(--padding60);
+    background-color: var(--bgColor);
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    gap: 15px;
+}
+
+
+ @media (max-width: 767px) {
+    .features .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+ }
+
+ 
+
+
+ .features .container div {
+    text-align: center;
+    padding: 20px;
+    box-shadow: rgba(16, 202, 183, 0.3) 0px 0px 5px 0px,
+                rgba(16, 202, 183, 0.3) 0px 0px 1px 0px;
+    }
+
+
+.features div i {
+    font-size: 40px;
+    color: var(--mainColor);
+}
+
+.features div h3 {
+    font-weight: 800;
+    margin: 25px 0;
+}
+
+.features div p {
+    line-height: 1.7;
+    color: #888;
+    font-size: 18px;
+}
+
+/*--| End Features Section Style |--*/
+
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+
+
+/*--| Start Special Heading Style |--*/
+
+.special-heading {
+    margin: 0;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    color: var(--sectionColor);
+    
+}
+
+.special-heading + p {
+    text-align: center;
+    margin-top: -30px;
+    color: #575757;
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+
+    .special-heading + p {
+        margin-top: -24px;
+    }
+}
+
+/*--| End Special Heading Style |--*/
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+
+/*--| Start Services Section Style |--*/
+.services {
+    padding-top: var(--padding60);
+    padding-bottom: var(--padding60);
+}
+
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 100px;
+}
+
+.services .col {
+    margin: 20px;
+    padding: 20px;
+}
+
+.services .serv {
+    display: flex;
+    margin-bottom: 45px;
+}
+
+@media (max-width: 767px) {
+    .services .serv {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+.services .serv i {
+    color: var(--mainColor);
+    flex-basis: var(--padding60);
+}
+
+
+.services .serv .text {
+    flex: 1;
+}
+
+
+.services .serv .text h3 {
+    margin: 0 0 20px;
+}
+
+.services .serv .text p {
+    color: var(--headColor);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.services .img {
+    position: relative;
+}
+
+@media (max-width:1024px) {
+    .services .img  {
+        display: none;
+    }
+}
+
+.services .img::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: calc(100% + 70px);
+    background-color: var(--headColor);
+    right: 0px;
+    top: -35px;
+    z-index: -1;
+}
+
+
+
+.services .img img {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(16, 202, 183, 0.7) 0px 0px 5px 0px,
+                rgba(16, 202, 183, 0.7) 0px 0px 2px 0px;
+}
+
+
+/*--| End Services Section Style |--*/
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+
+/*--| Start Portfolio Section Style |--*/
+.portfolio {
+    padding-top: var(--padding60);
+    padding-bottom: var(--padding60);
+    background-color: var(--bgColor);
+}
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 100px;
+    gap: 20px;
+}
+
+.portfolio .col {
+    box-shadow: rgba(16, 202, 183, 0.7) 0px 0px 5px 0px,
+                rgba(16, 202, 183, 0.7) 0px 0px 2px 0px;
+                border-radius: 4px;
+                overflow: hidden;
+}
+
+.portfolio .col .text1 {
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+@media (max-width: 767px) {
+    .portfolio .col .text1 {
+        text-align: center;
+    }
+}
+
+.portfolio .col .text1 h3 {
+    margin: 0;
+}
+
+.portfolio .col .text1 p {
+    color: var(--headColor);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.portfolio .col .img-port img {
+    max-width: 100%;
+}
+
+
+/*--| End Portfolio Section  Style |--*/
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+
+/*--| Start About Section  Style |--*/
+
+.about {
+    padding-top: var(--padding60);
+    padding-bottom: var(--padding60);
+}
+
+.about .about-content {
+    margin-top: 100px;
+}
+
+.about .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+@media (max-width: 992px) {
+    .about .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.about .img {
+    width: 250px;
+    height: 375px;
+    position: relative;
+    box-shadow: rgba(16, 202, 183, 0.7) 0px 0px 5px 0px,
+                rgba(16, 202, 183, 0.8) 0px 0px 1px 0px;
+}
+
+.about .img::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: calc(100% + 70px);
+    background-color: var(--sectionColor);
+    left: -15px;
+    top: -35px;
+    z-index: -1;
+}
+
+.about .img::before {
+    content: '';
+    position: absolute;
+    width: 140px;
+    height: 300px;
+    border-bottom: 70px solid var(--mainColor);
+    border-left: 80px solid var(--mainColor);
+    right: -170px;
+    top: -35px;
+    z-index: -1;
+} 
+
+@media (max-width: 767px) {
+    .about .img {  
+    box-shadow: rgba(16, 202, 183, 0.7) 0px 0px 5px 1px,
+                rgba(16, 202, 183, 0.8) 0px 0px 5px 1px;
+    }
+
+    .about .img::before, .about .img::after {
+        display: none;
+    }
+}
+
+
+.about .img img {
+    max-width: 100%;
+}
+
+
+.about .text {
+    flex-basis: calc(100% - 475px);
+}
+
+.about .text p:first-child {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.about .text p:last-child {
+    line-height: 2;
+    color: #999;
+}
+
+
+.about .text hr {
+    width: 50%;
+    display: inline-block;
+    border-color: var(--mainColor);
+}
+
+
+
+/*--| End About Section  Style |--*/
+
+
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+
+/*--| Start Contact Section  Style |--*/
+
+.contact {
+    padding-top: var(--padding60);
+    padding-bottom: var(--padding60);
+    background-color: var(--bgColor);
+}
+
+.contact .contact-content {
+    padding-top: var(--padding60);
+    padding-bottom: var(--padding60);
+    text-align: center;
+}
+
+.contact .text p{
+    color: var(--headColor);
+    font-weight: 800;
+    font-size: 40px;
+    letter-spacing: -1px;
+}
+
+
+
+.contact .text a {
+    display: block;
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--mainColor);
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 767px) {
+    .contact .text p,
+    .contact .text a  {
+        font-size: 20px;
+    }
+}
+
+.contact .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.contact .social i {
+    color: var(--headColor);
+    margin-left: 20px;
+}
+
+
+/*--| End Contact Section  Style |--*/
+
+
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+/*_____________________________________________________*/
+
+/*--| Start Footer Section  Style |--*/
+
+footer.footer {
+    background-color: var(--headColor);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+}
+
+footer.footer span {
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+/*--| End Footer Section  Style |--*/
+
+
+
+
+
+
+
+
